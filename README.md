@@ -1,4 +1,4 @@
-# USed Some of the featurees of google maps 
+# Used Some of the featurees of google maps 
 
 1.searching current location
 2. marking  different places
