@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:imeOptions="actionDone"
+        android:id="@+id/mapET"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:hint="Type address here"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/icClear"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <ImageView
+        android:id="@+id/icClear"
+        android:background="@color/grey"
+        android:layout_margin="10dp"
+        android:layout_width="0dp"
+        android:padding="4dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/goBut"
+        android:src="@drawable/ic_clear_"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textFontWeight="600"
+        android:text="Go"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/goBut"
+        />
+
+    <com.google.android.gms.maps.MapView
+
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/mapET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:id="@+id/mapView"
+
+        />
+
+    <ImageView
+        android:id="@+id/findMyLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_my_location_24"
+        app:layout_constraintTop_toTopOf="@id/mapView"
+        app:layout_constraintEnd_toEndOf="@id/mapView"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        />
+
+    <!-- Write a layout.  Y'all are good at that by now. -->
+</androidx.constraintlayout.widget.ConstraintLayout>
